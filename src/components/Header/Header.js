@@ -104,7 +104,7 @@ export function Header(activePage) {
     {
       id: "resume",
       class: resumeClass,
-      href: "./resume",
+      href: "../resume",
     },
     importedHeaderText.resumeTitle,
     resumeLi
@@ -122,7 +122,7 @@ export function Header(activePage) {
     {
       id: "portfolio",
       class: portfolioClass,
-      href: "./portfolio",
+      href: "../portfolio",
     },
     importedHeaderText.portfolioTitle,
     portfolioLi
