@@ -1,0 +1,49 @@
+/* Variables des éléments graphiques du site */
+$primary-color: #0099ff;
+$secondary-color: #0059ff;
+$terciary-color: #ffe550;
+$text-color: #2c3e50;
+
+$primary-font: "Khand", sans-serif;
+$secondary-font: "Roboto Condensed", sans-serif;
+$terciary-font: "Rubik", sans-serif;
+
+$font-size-regular-mobile: 1rem;
+$font-size-regular-desktop: 2rem;
+
+$primary-blurry-backrgound: url("/public/img/LowPolyBackground-dark-Blurry.png");
+
+$bg--light: #ffffff;
+$bg--dark: linear-gradient(-127deg, #333333, #080f1b);
+$bg--dark--alt: linear-gradient(-127deg, #333333, #080f1b);
+
+$text--light: #222222;
+$text--dark: #f2f2f2;
+
+$marked--color: #0099ff;
+
+$links--color: #09f;
+$links--color--inverted: #ffe550;
+
+/* Animation variables */
+$standard-transition: 250ms ease;
+
+$prog-bar-dur: 100ms;
+$prog-bar-delay: 150ms;
+$loading-screen-delay: $prog-bar-dur + $prog-bar-delay * 2;
+
+$header-margin: 100px;
+
+/* Z-index values */
+$menu-zindex: 10;
+$contact-zindex: 9;
+$loading-zindex: 50;
+
+/* Shadow Styles */
+$classic-box-shadow: rgba(10, 10, 10, 0.7) 1px 2px 5px;
+$classic-box-shadow-low-opacity: rgba(10, 10, 10, 0.2) 1px 2px 5px;
+
+/* Height values */
+$navbar-desktop-height: 2.5rem;
+$navbar-desktop-margin: 4rem;
+$navbar-mobile-margin: 20rem; // This value is higher because it is used for the mobile navbar margin

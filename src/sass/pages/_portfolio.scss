@@ -1,0 +1,350 @@
+.modal-fullscreen {
+  &--container {
+    pointer-events: all;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background-color: whitesmoke;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--base {
+      position: fixed;
+      background: none;
+      transform: scale(0);
+      transition: all ease 0.2s;
+      opacity: 1;
+      max-height: auto;
+      &.active {
+        transform: scale(1);
+        transition: all ease 0.2s;
+        opacity: 1;
+        max-height: auto;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+    }
+  }
+  &--content {
+    &--webdev {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: white;
+      animation: pop-in 0.5s ease-in-out;
+      overflow-y: scroll;
+      background: #1e1e1e;
+    }
+    &--gamedev {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: pop-in 0.5s ease-in-out;
+      overflow-y: scroll;
+      z-index: 0;
+      color: white;
+      text-shadow: #000000 1px 1px 20px;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    &--photoEditing {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: white;
+      animation: pop-in 0.5s ease-in-out;
+      overflow-y: scroll;
+      background: #1e1e1e;
+    }
+    &--videoEditing {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: white;
+      animation: pop-in 0.5s ease-in-out;
+      overflow-y: scroll;
+      background: #111111;
+    }
+  }
+  &--webdev {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../assets/images/portfolio/webdev/vscode_background_frame.png"); //linear-gradient(-45deg, white, whitesmoke);
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 1;
+
+    pointer-events: none;
+  }
+  &--gamedev {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url("https://i.pinimg.com/originals/59/a3/b1/59a3b1dc5e52c3d732f79154e3d88cea.gif");
+    z-index: -1;
+  }
+  &--photoEditing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../assets/images/portfolio/photo-editing/photoshop_frame.png"); //linear-gradient(-45deg, white, whitesmoke);
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 1;
+
+    pointer-events: none;
+  }
+  &--videoEditing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../assets/images/portfolio/video-editing/Vegas_frame.png"); //linear-gradient(-45deg, white, whitesmoke);
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 1;
+
+    pointer-events: none;
+  }
+  &--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  &--body {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+  }
+  &--exit {
+    &--webdev {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 5%;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      border-radius: 0px 0px 5px 5px;
+      outline: none;
+      color: white;
+      background-color: #3c3c3c;
+      cursor: default;
+      transition: all 0.2s ease-in-out;
+      font-family: "Rajdhani SemiBold";
+      font-size: 20px;
+      font-weight: 600;
+      z-index: 5;
+      &:hover {
+        background-color: red;
+        color: white;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    &--gamedev {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 100px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: 2px solid #fffb7b;
+      outline: none;
+      color: #f6e0c9;
+      background: linear-gradient(#593b1c, #2b1e0e);
+      font-size: 24px;
+      z-index: 5;
+      &:hover {
+        background: linear-gradient(#d79b3e, #a47326);
+        color: #fde5ca;
+        transition: all 2s ease-in-out;
+      }
+    }
+    &--photoEditing {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 5%;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      border-radius: 0px 0px 5px 5px;
+      outline: none;
+      color: white;
+      background-color: #3c3c3c;
+      cursor: default;
+      transition: all 0.2s ease-in-out;
+      font-family: "Rajdhani SemiBold";
+      font-size: 20px;
+      font-weight: 600;
+      z-index: 5;
+      &:hover {
+        background-color: red;
+        color: white;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    &--videoEditing {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 5%;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      border-radius: 0px 0px 5px 5px;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background-color: #393939;
+      cursor: default;
+      transition: all 0.2s ease-in-out;
+      font-family: "Rajdhani SemiBold";
+      font-size: 20px;
+      font-weight: 600;
+      z-index: 5;
+      &:hover {
+        background-color: red;
+        color: white;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
+
+.portfolio {
+  width: 95%;
+  margin: auto;
+  &--header {
+  }
+  &--content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 1rem 0;
+    @include glass-styled-container-background;
+  }
+}
+
+.tile {
+  &--container {
+    width: 280px;
+    height: 280px;
+    margin: 1rem;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    padding: 1rem;
+    &:hover {
+      transition: all 0.2s ease;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    &--webdev:hover {
+      background-image: url("https://code.visualstudio.com/assets/docs/editor/emmet/emmet-multi-cursor.gif");
+      background-position: center;
+      background-size: cover;
+      color: whitesmoke;
+      text-shadow: #000000 0px 0px 5px;
+      transition: all ease 0.2s;
+    }
+    &--gamedev:hover {
+      background-image: url("../assets/images/portfolio/gamedev/gamedev-cover.gif");
+      background-position: center;
+      background-size: cover;
+      color: whitesmoke;
+      text-shadow: #000000 0px 0px 5px;
+      transition: all ease 0.2s;
+    }
+    &--photoEditing:hover {
+      background-image: url("../assets/images/portfolio/photo-editing/tile-photoshop-anim.gif");
+      background-position: center;
+      background-size: cover;
+      color: whitesmoke;
+      text-shadow: #000000 0px 0px 5px;
+      transition: all ease 0.2s;
+    }
+    &--videoEditing:hover {
+      background-image: url("../assets/images/portfolio/video-editing/sprt_background.gif");
+      background-position: center;
+      background-size: cover;
+      color: whitesmoke;
+      text-shadow: #000000 0px 0px 5px;
+      transition: all ease 0.2s;
+    }
+  }
+  &--title {
+    font-family: "Rajdhani SemiBold";
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+.iframe {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &--wrapper {
+    position: relative;
+    //padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    z-index: 0;
+  }
+  &--button {
+    background: linear-gradient(-30deg, rgb(33, 56, 123), rgb(0, 77, 170));
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+    font-family: "Rajdhani SemiBold";
+    width: auto;
+    transition: all ease 0.2s;
+    &:hover {
+      background: linear-gradient(30deg, rgb(49, 65, 116), rgb(0, 58, 129));
+      font-weight: 600;
+      transition: all ease 0.2s;
+    }
+  }
+}

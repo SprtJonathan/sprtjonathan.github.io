@@ -1,0 +1,337 @@
+#app {
+  font-family: rajdhani, Roboto, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-align: center; */
+  color: #2c3e50;
+}
+
+body {
+  margin: 0;
+}
+html {
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+}
+body {
+  background-color: $bg--light;
+  color: $text--light;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+main {
+  //margin: $navbar-mobile-margin auto;
+}
+
+.text-light {
+  color: $text--dark;
+}
+
+.text-dark {
+  color: $text--light;
+}
+
+h1 {
+  font-family: $primary-font;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: var(--header-margin);
+  margin-bottom: 25px;
+}
+h2 {
+  font-family: $secondary-font;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  font-family: var(--secondary-font);
+  text-align: justify;
+}
+h3 {
+  font-family: $terciary-font;
+  font-size: 18px;
+  font-weight: 500;
+}
+p {
+  font-family: rajdhani, sans-serif;
+  text-align: justify;
+}
+a.link {
+  color: $links--color;
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
+button {
+  background: none;
+  border: none;
+}
+.button {
+  border: transparent;
+  height: 3rem;
+  &--base {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: whitesmoke;
+    &--inverted {
+      background-color: none;
+      color: $primary-color;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+.body {
+  display: flex;
+  flex-direction: column;
+}
+.collapsing {
+  transform: translateY(200px) scaleY(0.5);
+  opacity: 0;
+}
+.collapsible {
+  transition: 300ms ease-in-out;
+  width: 98%;
+  margin: auto;
+  padding: 2rem 0rem;
+}
+.collapsible--button {
+  padding: 8px 2rem;
+  margin: 1rem;
+  border: 0px transparent;
+}
+.collapsible--button:focus {
+  color: $text--light;
+}
+.collapsible--button:hover {
+  color: $links--color;
+}
+.collapsible--button h2 {
+  text-align: center;
+}
+.collapsible--content {
+  padding: 1rem;
+}
+.collapsible--text {
+  text-align: left;
+}
+.collapsible section {
+  width: 90%;
+  margin: auto;
+}
+mark {
+  margin: 0px;
+  padding: 0px;
+}
+mark.blue-underline {
+  background-color: transparent;
+  padding-bottom: 3px;
+  border-bottom: 3px solid $primary-color;
+}
+.modal-content {
+  width: fit-content;
+}
+.modal-button {
+  color: $links--color;
+  background-color: transparent;
+  border: 0px;
+  margin: 0px;
+}
+.modal-button:hover {
+  background-color: rgba(14, 14, 14, 0.25);
+  color: $links--color--inverted;
+}
+#page-marker {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+  &--to-hide {
+    animation: slide-down-to-invisible 0.5s ease-in-out;
+    visibility: hidden;
+  }
+}
+
+.spacer {
+  &--vertical {
+    &--medium {
+      display: block;
+      margin: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+::-webkit-scrollbar-track {
+  filter: blur(2px);
+  background-color: grey;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 25px;
+  background-clip: content-box;
+}
+
+/* language modal */
+
+.language-modal {
+  &--container {
+    pointer-events: all;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background-color: rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--base {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: none;
+      transform: scale(0);
+      transition: all ease 0.2s;
+      opacity: 1;
+      max-height: auto;
+      &.active {
+        transform: scale(1);
+        transition: all ease 0.2s;
+        opacity: 1;
+        max-height: auto;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+    }
+  }
+  &--content {
+    position: absolute;
+    width: 85%;
+    color: black;
+  }
+  &--blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include glass-styled-container-background;
+    z-index: -1;
+  }
+  &--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+    &--text {
+      font-family: "Rajdhani semibold";
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+  &--body {
+    width: 90%;
+    margin: 1rem auto;
+    font-size: 20px;
+    font-family: "Rajdhani";
+    font-weight: 500;
+  }
+
+  &--exit {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .collapsible--button h2 {
+    text-align: left;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}
+
+body {
+  /* Variables des éléments graphiques du site */
+  --primary-color: #0f2841; /*#0099ff;*/
+  --secondary-color: #0059ff;
+  --terciary-color: #ffe550;
+  --text-color: #2c3e50;
+
+  --primary-font: "Khand", sans-serif;
+  --secondary-font: "Roboto Condensed", sans-serif;
+  --terciary-font: "Rubik", sans-serif;
+
+  --font-size-regular-mobile: 1rem;
+  --font-size-regular-desktop: 2rem;
+
+  --primary-blurry-backrgound: url("/public/img/LowPolyBackground-dark-Blurry.png");
+
+  --bg--light: #f2f2f2;
+  --bg--dark: linear-gradient(-127deg, #333333, #080f1b);
+  --bg--dark--alt: linear-gradient(-127deg, #333333, #080f1b);
+
+  --text--light: #222222;
+  --text--dark: #f2f2f2;
+
+  /* Animation variables */
+  --standard-transition: 250ms ease;
+
+  --prog-bar-dur: 100ms;
+  --prog-bar-delay: 150ms;
+  --loading-screen-delay: --prog-bar-dur + --prog-bar-delay * 2;
+
+  --header-margin: 100px;
+
+  /* Z-index values */
+  --menu-zindex: 10;
+  --contact-zindex: 9;
+  --loading-zindex: 50;
+
+  /* Shadow Styles */
+  --classic-box-shadow: rgba(10, 10, 10, 0.7) 1px 2px 5px;
+  --classic-box-shadow-low-opacity: rgba(10, 10, 10, 0.2) 1px 2px 5px;
+}
+
+@media (min-width: 720px) {
+  main {
+    //margin-top: $navbar-desktop-margin;
+  }
+}

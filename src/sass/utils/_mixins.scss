@@ -1,0 +1,47 @@
+/* Mixins du site */
+@mixin background-shadow-default {
+  background-image: var(--background-image);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 32px;
+}
+
+@mixin button-base-style {
+  font-family: $primary-font;
+  letter-spacing: 2px;
+  margin: 7.5px;
+  backdrop-filter: blur(2px);
+  background-color: rgba(10, 10, 10, 0.7);
+  box-shadow: rgba(10, 10, 10, 0.7) 1px 2px 5px;
+  border-radius: 10px;
+  padding: 0px 1rem;
+  transition: all 500ms ease;
+  &:hover {
+    background-color: rgba(20, 20, 20, 0.5);
+    transition: all 200ms ease;
+  }
+}
+
+@mixin glass-styled-container-background {
+  background: rgba(255, 255, 255, 0.548);
+  border-radius: 8px;
+  box-shadow: 0 2.8px 2.2pxrgba (0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border: 1px solid rgba(202, 235, 247, 0.72);
+}
+
+@mixin dark-glass-styled-container-background {
+  background: rgba(63, 63, 63, 0.548);
+  border-radius: 8px;
+  box-shadow: 0 2.8px 2.2pxrgba (0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border: 1px solid rgba(202, 235, 247, 0.72);
+}

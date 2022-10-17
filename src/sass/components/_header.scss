@@ -1,0 +1,224 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+
+  position: fixed;
+  top: 0px;
+
+  z-index: 10;
+  &--menu {
+    width: 100vw;
+    animation: slide-down 0.5s ease-in-out;
+    pointer-events: all;
+  }
+  &--toggle {
+    @include glass-styled-container-background;
+    margin: 10px;
+    position: relative;
+    padding: 10px;
+    transition: position ease-in-out 0.2s;
+    pointer-events: all;
+    &:hover {
+      @include dark-glass-styled-container-background;
+      color: white;
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: all ease-in-out 0.2s;
+    }
+    &--icon {
+      transform: rotate(0deg);
+      transition: all ease-in-out 0.5s;
+      &--after {
+        transform: rotate(90deg);
+        transition: all ease-in-out 0.5s;
+      }
+    }
+  }
+
+  &--slided {
+    transform: translateY(-$navbar-mobile-margin);
+    animation: slide-up 0.5s ease-in-out;
+  }
+
+  &--li {
+    display: flex;
+    list-style: none;
+    transition: color 250ms;
+    width: 100%;
+    border-bottom: 1px black solid;
+
+    justify-content: center;
+    &--dropdown {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      animation: slide-down 0.5s ease-in-out;
+      transition: all 500ms ease-in-out;
+    }
+  }
+  &--block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.navbar--button {
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: #252525;
+  font-family: rajdhani, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0;
+  line-height: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 500ms ease-in-out;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0) 50%,
+    $text--light 50%
+  );
+  background-size: 400% 200%;
+  background-position: right bottom;
+}
+
+.navbar--li:hover .navbar--button,
+.navbar--li:focus .navbar--button {
+  color: white;
+  background-position: left bottom;
+}
+.navbar--toggle:hover .navbar--button,
+.navbar--toggle:focus .navbar--button {
+  color: white;
+  background-position: left bottom;
+}
+
+.fa {
+  line-height: center;
+}
+
+.active-page {
+  color: white;
+  background: $text--light;
+}
+
+.contact-form {
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+  min-width: 50%;
+  height: 90%;
+  padding: 1rem;
+  margin: auto;
+  &--input {
+    border: 1px solid $text--light;
+    box-shadow: inset 0 0 3px $text--light;
+  }
+  &--buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90%;
+    margin: auto;
+  }
+  &--link {
+    margin: auto;
+  }
+}
+
+.language-flag {
+  transition: all 500ms ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 500ms ease-in-out;
+  }
+}
+
+@media (min-width: 720px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    height: $navbar-desktop-height;
+    &--block {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    &--li {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      min-width: 2rem;
+      width: 100%;
+      border: none;
+      justify-content: center;
+    }
+    &:focus {
+      border: 1px black solid;
+    }
+    &--button {
+      display: flex;
+      font-size: 20px;
+      width: 100%;
+      height: $navbar-desktop-height;
+      padding: 0rem 2rem;
+      align-items: center;
+
+      box-shadow: $classic-box-shadow-low-opacity;
+    }
+  }
+
+  .navbar--li .navbar--button {
+    border-right: 0.5px solid $primary-color;
+  }
+
+  .navbar--li .navbar--li:nth-child(1) .navbar--button {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .active-page {
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    &--toggle {
+      padding: 10px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 2140px) {
+  .navbar--button {
+    font-size: 0.8vw;
+  }
+}
