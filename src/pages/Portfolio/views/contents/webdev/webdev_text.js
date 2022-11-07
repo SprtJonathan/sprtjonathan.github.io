@@ -54,7 +54,7 @@ const webdevText = {
     un formulaire avec des champs personnalisables puis de remplir ces champs et de retrouver les données entrées dans un tableau situé sur une autre page. 
     L'objectif est de proposer un outil simple et complet afin de pouvoir effectuer des tâches administratives simples et de façon intuitive : Création de tableaux (avec fonctionnalité de recherche et de tri), exportation des données, importation de données pré-existantes, 
     exportation du code html du formulaire créé afin de simplifier la création de formulaires pour des projets de site web, création de sondages avec affichage et exploitation des résulats, formulaires de type Google Form. L'idéal serait de pouvoir rendre cet outil 
-    accesible au plus grand nombre en proposant une interface simple et compréhensible, une gestion du travail en local pour chaque utilisateur ou la possibilité de synchroniser leurs appareils via un compte créé. <br/>
+    accesible au plus grand nombre en proposant une interface simple et compréhensible, la possibilité pour chaque utilisateur de créer une instance et de la sauvegarder (et aussi de restreindre l'accès à une instance personnelle). <br/>
     Vous pouvez explorer le site web grâce à la fenêtre intégrée ci-dessous. <br/>
     `,
     administrativeManagerTitle: `<a class="link" href="https://github.com/SprtJonathan/AdministrativeManager">Administrative Manager</a>`,
@@ -111,10 +111,15 @@ const webdevText = {
     and whose goal was to create a starter type project for all my future web projects. I wanted to make it possible to reuse components without having to rewrite their code, like a React/Vue type framework, but all in JS Vanilla.`,
     personalProjectRebooted: `I recently recreated a project of the same type but without using this component system that I hadn't managed to make viable at the time. This project, named <a class="link" href="https://github.com/SprtJonathan/js-project-base">JS Project Base</a>
     allows, as its name suggests, to start a project more quickly. It contains a project base with an index.html, an index.js containing a simple function to rotate the JS logo on click, a CSS base organized like SASS with a master file
-    importing the code of all the dependent files, this in order to better organize the workspace of the style and to better optimize the code by facilitating the stylistic consistency of the pages and avoiding rewriting code already existing on previous pages. Because after all:
+    importing the code of all the dependencies files, this in order to better organize the workspace of the style and to better optimize the code by facilitating the stylistic consistency of the pages and avoiding rewriting code already existing on previous pages. Because after all:
     <blockquote>Do not repeat yourself*</blockquote>`,
     jsBaseTitle: `<a class="link" href="https://github.com/SprtJonathan/js-project-base">JS Project Base</a>`,
-    administrativeManagerDescription: `Finally, I am currently working in my free time on another project, started thanks to my starter pack by the way`,
+    administrativeManagerDescription: `Finally, I am currently working in my spare time on another project, started thanks to my starter pack by the way. This is an online tool for creating
+    a form with customizable fields then fill in these fields and view the data entered in a table located on another page.
+    The objective is to offer a simple and complete tool in order to be able to carry out simple administrative tasks in an intuitive way: Creation of tables (with search and sorting functionality), export of data, import of pre-existing data,
+    export of the html code of the form created in order to simplify the creation of forms for website projects, creation of surveys with display and exploitation of the results, Google Form type forms. The ideal would be to be able to make this tool
+    accessible to as many people as possible by offering a simple and understandable interface, the possibility for each user to create an instance and save it (and also to restrain access to a personal instance). <br/>
+    You can explore the website through the integrated window below.`,
     administrativeManagerTitle: `<a class="link" href="https://github.com/SprtJonathan/AdministrativeManager">Administrative Manager</a>`,
     administrativeManagerToggleButton: "Launch demo",
     administrativeManagerExitButton: "Close demo",
