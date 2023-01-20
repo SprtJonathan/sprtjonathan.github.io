@@ -1,0 +1,41 @@
+.auth {
+  &--form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &--label {
+    width: 100%;
+    margin: 0.5rem 0rem;
+  }
+  &--input {
+    width: 100%;
+    border: 1px solid black;
+    margin: 0.5rem 0rem;
+  }
+  &--button {
+    &--container {
+      margin: 0.5rem 0rem;
+    }
+  }
+}
+
+.repo {
+  &--header {
+    width: 95%;
+    margin: auto;
+    &--title {
+    }
+    &--description {
+      text-align: justify;
+    }
+  }
+  &--updates {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 95%;
+    margin: auto;
+  }
+}
