@@ -2,6 +2,7 @@ const headerText = {
   fr: {
     resumeTitle: "Mon CV",
     portfolioTitle: "Portfolio",
+    aboutMeTitle: "À propos",
     contactTitle: "Contact",
     languageTitle: "Langue",
     contactHeader: "Contactez moi",
@@ -19,6 +20,7 @@ const headerText = {
   en: {
     resumeTitle: "Resume",
     portfolioTitle: "Portfolio",
+    aboutMeTitle: "About me",
     contactTitle: "Contact",
     languageTitle: "Language",
     contactHeader: "Contact me",

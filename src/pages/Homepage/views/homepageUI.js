@@ -25,7 +25,7 @@ export const homepageContent = createElementFromTemplate(
 /**/
 const summaryIntroNameSection = createElementFromTemplate(
   "section",
-  { id: "summary", class: "intro--section intro--name" },
+  { id: "summary", class: "homepage--section homepage--name" },
   "",
   homepageContent
 );
@@ -60,139 +60,26 @@ createElementFromTemplate(
 /**/
 
 /**/
+
 const summarySection = createElementFromTemplate(
   "section",
-  { class: "intro--section intro--summary" },
+  { class: "homepage--section homepage--name" },
   "",
   homepageContent
 );
 
 const summarySectionTextContainer = createElementFromTemplate(
   "div",
-  { class: "intro--inner-text--block" },
+  { class: "homepage--inner-text--block" },
   "",
   summarySection
 );
 
 createElementFromTemplate(
   "p",
-  { class: "intro--inner-text" },
-  importedText.homepageIntroSummary,
+  { class: "text-light homepage--inner-text" },
+  importedText.homepageActivityDescription,
   summarySectionTextContainer
 );
-/**/
 
-/**/
-const introSection = createElementFromTemplate(
-  "section",
-  {
-    class: "intro--section intro--introduction",
-    style: "background-color: #1e1e1e",
-  },
-  "",
-  homepageContent
-);
-
-createElementFromTemplate(
-  "p",
-  { class: "intro--inner-text" },
-  importedText.homepageIntroIntroduction,
-  introSection
-);
-/**/
-
-/**/
-const webdevSection = createElementFromTemplate(
-  "section",
-  {
-    class: "intro--section intro--type webdev",
-  },
-  "",
-  homepageContent
-);
-
-createElementFromTemplate(
-  "span",
-  { class: "text-light" },
-  importedText.homepageWebdevTitle,
-  webdevSection
-);
-
-createElementFromTemplate(
-  "img",
-  {
-    class: "intro--type--image",
-    src: webdevImage,
-    height: "30%",
-    alt: "Web development illustration picture",
-  },
-  "",
-  webdevSection
-);
-/**/
-
-/**/
-const gamedevSection = createElementFromTemplate(
-  "section",
-  {
-    class: "intro--section intro--type gamedev",
-  },
-  "",
-  homepageContent
-);
-
-createElementFromTemplate(
-  "img",
-  {
-    class: "intro--type--image",
-    src: gamedevImage,
-    height: "30%",
-    alt: "Game development illustration picture",
-  },
-  "",
-  gamedevSection
-);
-
-createElementFromTemplate(
-  "span",
-  { class: "text-light" },
-  importedText.homepageGamedevTitle,
-  gamedevSection
-);
-/**/
-
-/**/
-const gamedevObjectives = createElementFromTemplate(
-  "section",
-  {
-    class: "intro--section intro--objectives--game",
-  },
-  "",
-  homepageContent
-);
-
-createElementFromTemplate(
-  "p",
-  { class: "intro--objectives--text" },
-  importedText.homepageIntroObectivesGame,
-  gamedevObjectives
-);
-/**/
-
-/**/
-const webdevObjectives = createElementFromTemplate(
-  "section",
-  {
-    class: "intro--section intro--objectives--web",
-  },
-  "",
-  homepageContent
-);
-
-createElementFromTemplate(
-  "p",
-  { class: "intro--objectives--text" },
-  importedText.homepageIntroObjectivesWeb,
-  webdevObjectives
-);
 /**/

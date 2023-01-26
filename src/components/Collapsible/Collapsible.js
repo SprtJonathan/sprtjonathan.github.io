@@ -39,8 +39,13 @@ export default function Collapsible(
   const collapsibleTitle = document.createElement("div");
   collapsibleTitle.setAttribute("class", collapsibleClassName + "--title");
 
-  collapsibleTitle.innerHTML = `<span class=collapsibleClassName + "--title--text">${titleContent} </span>`;
-  collapsibleTitle.append(collapsibleExpandIcon);
+  if (typeof titleContent === "string") {
+    collapsibleTitle.innerHTML = `<span class=collapsibleClassName + "--title--text">${titleContent} </span>`;
+
+    collapsibleTitle.append(collapsibleExpandIcon);
+  } else {
+    collapsibleTitle.append(titleContent);
+  }
 
   collapsibleTitleContainer.appendChild(collapsibleTitle);
   collapsibleContainer.appendChild(collapsibleTitleContainer);

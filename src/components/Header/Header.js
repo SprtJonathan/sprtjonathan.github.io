@@ -45,20 +45,29 @@ export function Header(activePage) {
   let homepageClass = "navbar--button";
   let resumeClass = "navbar--button";
   let portfolioClass = "navbar--button";
+  let aboutMeClass = "navbar--button";
 
   const setActivePage = (page) => {
     if (page == "/home" || page == "/") {
       homepageClass = "navbar--button active-page";
       resumeClass = "navbar--button";
       portfolioClass = "navbar--button";
+      aboutMeClass = "navbar--button";
     } else if (page == "/resume") {
       homepageClass = "navbar--button";
       resumeClass = "navbar--button active-page";
       portfolioClass = "navbar--button";
+      aboutMeClass = "navbar--button";
     } else if (page == "/portfolio") {
       homepageClass = "navbar--button";
       resumeClass = "navbar--button";
       portfolioClass = "navbar--button active-page";
+      aboutMeClass = "navbar--button";
+    } else if (page == "/about-me") {
+      homepageClass = "navbar--button";
+      resumeClass = "navbar--button";
+      portfolioClass = "navbar--button";
+      aboutMeClass = "navbar--button active-page";
     }
   };
   setActivePage(currentPage);
@@ -91,23 +100,22 @@ export function Header(activePage) {
     `<i class="fa-solid fa-house"></i>`,
     homepageLi
   );
-
-  const resumeLi = createElementFromTemplate(
+  const aboutMeLi = createElementFromTemplate(
     "li",
     { class: "navbar--li" },
     "",
     menuUl
   );
 
-  const resumeLink = createElementFromTemplate(
+  const aboutMeLink = createElementFromTemplate(
     "a",
     {
-      id: "resume",
-      class: resumeClass,
-      href: "../resume",
+      id: "home",
+      class: aboutMeClass,
+      href: "../about-me",
     },
-    importedHeaderText.resumeTitle,
-    resumeLi
+    importedHeaderText.aboutMeTitle,
+    aboutMeLi
   );
 
   const portfolioLi = createElementFromTemplate(
@@ -126,6 +134,24 @@ export function Header(activePage) {
     },
     importedHeaderText.portfolioTitle,
     portfolioLi
+  );
+
+  const resumeLi = createElementFromTemplate(
+    "li",
+    { class: "navbar--li" },
+    "",
+    menuUl
+  );
+
+  const resumeLink = createElementFromTemplate(
+    "a",
+    {
+      id: "resume",
+      class: resumeClass,
+      href: "../resume",
+    },
+    importedHeaderText.resumeTitle,
+    resumeLi
   );
 
   const contactLi = createElementFromTemplate(
