@@ -24,6 +24,7 @@
     width: 100%;
     background-image: url("../assets/images/homepage/webdev.png");
     background-position: center;
+    background-size: cover;
     z-index: 1;
     -webkit-filter: blur(2px);
     -moz-filter: blur(2px);
@@ -147,7 +148,7 @@
     object-fit: cover;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     &--image {
       background-position: center;
     }
@@ -196,9 +197,6 @@ li {
     &--inner-text {
       font-size: 30px;
     }
-    &--type {
-      flex-direction: row;
-    }
     &--objectives {
       &--game {
         justify-content: flex-end;
@@ -237,10 +235,29 @@ li {
   }
 }
 
+@media (min-width: 700px) {
+  .intro {
+    &--inner-text {
+      max-width: 60%;
+    }
+  }
+}
+
+@media (min-width: 830px) {
+  .intro {
+    &--inner-text {
+      max-width: 47%;
+    }
+    
+  }
+}
 @media (min-width: 964px) {
   .intro {
     &--inner-text {
-      max-width: 55%;
+      max-width: 50%;
+    }
+    &--type {
+      flex-direction: row;
     }
   }
 }

@@ -1278,6 +1278,7 @@ textarea {
   width: 100%;
   background-image: url("../assets/images/homepage/webdev.png");
   background-position: center;
+  background-size: cover;
   z-index: 1;
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
@@ -1405,7 +1406,7 @@ textarea {
      object-fit: cover;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 .aboutme--background--image {
   background-position: center;
@@ -1448,9 +1449,6 @@ li {
   .intro--inner-text {
     font-size: 30px;
   }
-  .intro--type {
-    flex-direction: row;
-  }
   .intro--objectives--game {
     justify-content: flex-end;
   }
@@ -1479,9 +1477,22 @@ li {
     max-width: 70%;
   }
 }
+@media (min-width: 700px) {
+  .intro--inner-text {
+    max-width: 60%;
+  }
+}
+@media (min-width: 830px) {
+  .intro--inner-text {
+    max-width: 47%;
+  }
+}
 @media (min-width: 964px) {
   .intro--inner-text {
-    max-width: 55%;
+    max-width: 50%;
+  }
+  .intro--type {
+    flex-direction: row;
   }
 }
 @media (min-width: 1200px) {
