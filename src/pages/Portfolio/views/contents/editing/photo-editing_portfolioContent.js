@@ -9,6 +9,8 @@ const fb2 =
   "/src/assets/images/portfolio/photo-editing/facebook/facebook-pp-2.png";
 const fb3 =
   "/src/assets/images/portfolio/photo-editing/facebook/facebook-pp-3.png";
+const fb4 =
+  "/src/assets/images/portfolio/photo-editing/facebook/facebook-pp-4.png";
 const fbBanner1 =
   "/src/assets/images/portfolio/photo-editing/facebook/facebook-banner-1.png";
 const fbBanner2 =
@@ -96,6 +98,12 @@ const carouselFacebookMedias = [
     type: "image",
     title: "",
     link: fb3,
+    description: "",
+  },
+  {
+    type: "image",
+    title: "",
+    link: fb4,
     description: "",
   },
   {
