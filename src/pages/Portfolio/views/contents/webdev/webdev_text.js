@@ -60,6 +60,21 @@ const webdevText = {
     administrativeManagerTitle: `<a class="link" href="https://github.com/SprtJonathan/AdministrativeManager">Administrative Manager</a>`,
     administrativeManagerToggleButton: "Lancer la démo",
     administrativeManagerExitButton: "Quitter la démo",
+    echangrDescription: `Depuis mi-mars 2023, en parallèle de ma recherche de mission pour mon auto-entreprise, je travaille sur un projet de petit réseau social codé avec Next.js car je souhaitais apprende ce framework. L'objectif était initialement de créer un site web simple permettant aux utilisateurs connectés avec des services comme Discord, de publier 
+    des posts accompagnés d'images. Les autres utilisateurs auraient enusite pu les commenter et réagir aux posts. Au fur et à mesure de l'avancement du projet, je me suis finalement orienté vers un service de gestion d'utilisateurs plus classique avec une inscription au site. En plus de Next.js 
+    le projet est déployé sur Vercel, la base de données est gérée par postgreSQL sur un service nommé Aiven, les images envoyées par les utilisateurs sont stockées dans le cloud grâce à Cloudinary, les emails de confirmation sont envoyés grâce à SendInBlue, les mots de passes sécurisés avec bcrypt et les données de connexion sécurisées avec JWT. <br/><br/>
+    
+    Ce projet est probablement le plus important que j'ai pu réaliser à ce jour car il regroupe les compétences que j'ai pu apprendre pendant mes deux formations (développement front et back).<br/> <br/>
+    
+    Une autre particularité de ce projet est que je l'ai réalisé en "collaboration" avec l'outil d'openAI: ChatGPT (3 et 4). En effet, les technologies d'intelligence artificielles et LLM (Large Language Models) étant de plus en plus développés et aboutis, ils prendront très probablement une place 
+    de plus en plus importante tant pour les développeurs que les consommateurs. Je me suis donc dit qu'il valait mieux apprendre à correctement se servir de ces outils formidables qui seront probablement omniprésents à l'avenir dans le monde du développement. Malgré tout, ChatGPT n'a pas toujours été 
+    la solution à tous les obstacles rencontrés au cours de ce projet. En effet, le problème de cet outil est qu'il dépend d'OpenAI (et des limitations d'utilisation) mais également qu'il n'a pas non plus réponse à tout. Il m'a par exemple plutôt desservi lors du développement de certains aspects de la fonctionnalité d'envoi 
+    d'images au site. À de nombreuses reprises, j'ai dû résoudre certains problèmes par moi même. <br/><br/>
+    Ainsi dans la réalisation de ce projet, ChatGPT a principalement été un atout qui m'a permis de résoudre certains problèmes rencontrés et d'accélérer le développment en me permettant de créer certainses fonctionnalités redondantes plus simplement puis de déployer le projet, le tout, en un peu plus d'un mois et demi.<br/>
+    Vous pouvez consulter le site ci-dessous: `,
+    echangrTitle: `<a class="link" href="https://e-changr.vercel.app/">E-ChangR</a>`,
+    echangrToggleButton: "Lancer la démo",
+    echangrExitButton: "Quitter la démo",
     developperMotto:
       "*Ne vous répétez pas : une des philosophies principales du développeur.",
   },
@@ -123,6 +138,20 @@ const webdevText = {
     administrativeManagerTitle: `<a class="link" href="https://github.com/SprtJonathan/AdministrativeManager">Administrative Manager</a>`,
     administrativeManagerToggleButton: "Launch demo",
     administrativeManagerExitButton: "Close demo",
+    echangrDescription: `Since mid-March 2023, while looking for a freelance mission to accomplish, I have been working on a small social network project programmed with Next.js because I wanted to learn this framework. The initial goal was to create a simple website allowing users logged in with services like Discord to publish posts with by images.
+    Other users could then comment and react to the posts. As the project progressed, I ultimately shifted towards a more traditional user management service with website registration. In addition to Next.js, the project is deployed on Vercel, the database is managed by PostgreSQL on a service named Aiven, 
+    user-uploaded images are stored in the cloud using Cloudinary, confirmation emails are sent using SendInBlue, passwords are secured with bcrypt, and login data is secured with JWT.
+
+    This project is probably the most important one I developed to date, as it brings together the skills I have learned during my two formations (front and back development).
+    
+    Another unique aspect of this project is that I completed it in "collaboration" with the openAI tool: ChatGPT (3 and 4). Indeed, as artificial intelligence and LLM (Large Language Models) technologies become more developed and refined, they will likely play an increasingly important role for both developers and consumers. 
+    I therefore thought it best to learn how to properly use these fantastic tools, which will probably be everywhere in the future of development. Nevertheless, ChatGPT was not always the solution to all the obstacles encountered during this project. Indeed, the problem with this tool is that it depends on OpenAI (and its usage limitations) 
+    but also that it does not have all the answers. It actually was counter productive for me in some aspects of the development of the image upload functionality for the site. Many times, I had to solve certain problems on my own.
+    Thus, in the development of this project, ChatGPT was primarily an asset that allowed me to solve certain problems encountered, and accelerate development by allowing me to create certain redundant features more simply and then deploy the project, all in just over a month and a half. 
+    You can visit the site below:`,
+    echangrTitle: `<a class="link" href="https://e-changr.vercel.app/">E-ChangR</a>`,
+    echangrToggleButton: "Launch demo",
+    echangrExitButton: "Close demo",
     developperMotto:
       "*Don't repeat yourself: one of the main philosophies of the developer.",
   },

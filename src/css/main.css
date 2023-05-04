@@ -1795,6 +1795,35 @@ li {
   transition: all ease 0.2s;
 }
 
+.project--title--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.repo--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 15px;
+  color: white;
+  text-decoration: none;
+  background-color: #505050;
+  border-radius: 5px;
+  width: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 1rem;
+  transition: all 0.3s;
+  font-weight: 500;
+  font-size: 17px;
+}
+.repo--button:hover {
+  background-color: #383838;
+  transition: all 0.3s;
+}
+
 .auth--form {
   display: flex;
   flex-direction: column;

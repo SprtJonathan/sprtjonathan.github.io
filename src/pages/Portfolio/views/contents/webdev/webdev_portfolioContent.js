@@ -55,6 +55,93 @@ createListOfLinks(
 );
 
 createElementFromTemplate("hr", {}, "", webdevContent);
+
+// E-changR
+const projectTitleContainer = createElementFromTemplate(
+  "div",
+  { class: "project--title--container" },
+  "",
+  webdevContent
+);
+
+createElementFromTemplate(
+  "h3",
+  {},
+  importedWebdevText.echangrTitle,
+  projectTitleContainer
+);
+
+createElementFromTemplate(
+  "a",
+  {
+    href: "https://github.com/SprtJonathan/EchangR",
+    class: "repo--button",
+    target: "_blank",
+  },
+  "Repo",
+  projectTitleContainer
+);
+
+createElementFromTemplate(
+  "p",
+  {},
+  importedWebdevText.echangrDescription,
+  webdevContent
+);
+
+const demoEchangRButton = createElementFromTemplate(
+  "button",
+  {
+    class: "iframe--button",
+    id: "iframe-button-1",
+  },
+  importedWebdevText.echangrToggleButton,
+  webdevContent
+);
+
+const echangR = createElementFromTemplate(
+  "div",
+  { class: "iframe--wrapper" },
+  "",
+  webdevContent
+);
+
+const echangRDemo = createElementFromTemplate(
+  "iframe",
+  {
+    class: "iframe",
+    src: "",
+    frameborder: "0",
+  },
+  "",
+  echangR
+);
+
+echangR.style.maxHeight = "0px";
+
+let isEchangRframeActive = false;
+demoEchangRButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  isEchangRframeActive = enableIframe(
+    echangR,
+    echangRDemo,
+    isEchangRframeActive,
+    demoEchangRButton,
+    "https://e-changr.vercel.app/"
+  );
+});
+
+createElementFromTemplate("hr", {}, "", webdevContent);
+
+// JS Base
+
+createElementFromTemplate(
+  "h3",
+  {},
+  importedWebdevText.jsBaseTitle,
+  webdevContent
+);
+
 createElementFromTemplate(
   "p",
   {},
@@ -66,13 +153,6 @@ createElementFromTemplate(
   "p",
   {},
   importedWebdevText.personalProjectRebooted,
-  webdevContent
-);
-
-createElementFromTemplate(
-  "h3",
-  {},
-  importedWebdevText.jsBaseTitle,
   webdevContent
 );
 
@@ -138,17 +218,18 @@ demoJSBaseButton.addEventListener("click", (e) => {
 });
 
 createElementFromTemplate("hr", {}, "", webdevContent);
-createElementFromTemplate(
-  "p",
-  {},
-  importedWebdevText.administrativeManagerDescription,
-  webdevContent
-);
 
+// Admin Manager
 createElementFromTemplate(
   "h3",
   {},
   importedWebdevText.administrativeManagerTitle,
+  webdevContent
+);
+createElementFromTemplate(
+  "p",
+  {},
+  importedWebdevText.administrativeManagerDescription,
   webdevContent
 );
 
