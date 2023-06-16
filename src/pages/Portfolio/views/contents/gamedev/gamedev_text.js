@@ -8,7 +8,7 @@ const gamedevText = {
     firstCategoryName: `Source² Engine (Half-Life: Alyx / VR) : `,
     firstCategoryDescription: `Depuis mars 2020, je me suis intéressé au moteur Source² de Valve, utilisé dans Half-Life Alyx: notamment. Ce moteur, bien que récent, partage de nombreux aspects avec son prédécesseur, sur lequel j'ai passé beaucoup de temps au cours de ces dernières années, 
     à apprendre des techniques de Level Design. J'ai pris un immense plaisir à y retourner et à approfondir mes bases. C'est un outil que je trouve très agréable à prendre en mains. 
-    L'exemple suivant est une carte pour le jeu Half-Life Alyx sur laquelle je travail depuis un mois. Je continue mon processus d'apprentissage du moteur au fur et à mesure que je progresse sur la géométrie de la map. J'ai appris à utiliser quelques uns des outils intégrés au moteur :
+    L'exemple suivant est une carte pour le jeu Half-Life Alyx sur laquelle je travaille depuis un mois. Je continue mon processus d'apprentissage du moteur au fur et à mesure que je progresse sur la géométrie de la map. J'ai appris à utiliser quelques uns des outils intégrés au moteur :
     <br/>
     - Tile Meshing : modèles 3D programmés pour former des cheminements définis par l'utilisateur (par exemple, les tuyaux aux murs, les conduits d'aérations etc.)
     <br/>

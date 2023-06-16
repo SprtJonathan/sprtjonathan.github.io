@@ -193,7 +193,7 @@ export const resumeContentText = {
     languagesSkillsTitle: `Linguistiques`,
     languagesSkillsContent: `
     <div class="content">
-        <p>Anglais : niveu courant</p>
+        <p>Anglais : niveau courant</p>
         <p>Polonais : Langue maternelle/Niveau basique (plus parlé que lu)</p>
     </div>`,
     /**/
