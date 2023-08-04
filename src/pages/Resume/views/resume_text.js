@@ -48,6 +48,18 @@ export const resumeHeaderText = {
 export const resumeContentText = {
   fr: {
     formationTitle: `Formation`,
+    openclassroomsCSBackend: `<h3>2023-2025</h3>
+    <p>
+      <b
+        >OpenClassrooms : Développeur Back-End C# / .NET - Diplôme RNCP de Niveau VI (Bac
+        +3/4) : </b
+      ><br /><br />
+      <li>Formation en alternance</li>
+      <li>Développement de fonctionnalités back-end</li>
+      <li>Maintenance et amélioration d'une application existante</li>
+      <li>Collaboration avec l'équipe front-end</li>
+      <li>Sécurité et conformité</li>
+    </p>`,
     openclassroomsFrontend: `
     <h3>2022</h3>
     <p>
@@ -163,6 +175,7 @@ export const resumeContentText = {
     computerSkillsTitle: `Informatiques`,
     computerSkillsContent: `
     <div class="content">
+      <p>C# /.NET : Apprentissage du C# au cours de ma formation en alternance</p>
       <p>HTML/CSS/SASS : Création de site web (Mon portfolio et les projets de ma formation chez OpenClassrooms)</p>
       <p>Création d’animations CSS</p>
       <p>Javascript : Frontend niveau avancé, backend niveau débutant.</p>
@@ -244,6 +257,17 @@ export const resumeContentText = {
   },
   en: {
     formationTitle: `Training`,
+    openclassroomsCSBackend: `<h3>2023-2025</h3>
+    <p>
+      <b>
+        OpenClassrooms: Back-End Developer C#/.NET - RNCP Level VI Diploma (Bac +3/4):
+      </b><br /><br />
+      <li>Apprenticeship training</li>
+      <li>Development of back-end functionalities</li>
+      <li>Maintenance and improvement of an existing application</li>
+      <li>Collaboration with the front-end team</li>
+      <li>Security and compliance</li>
+    </p>`,
     openclassroomsFrontend: `
     <h3>2022</h3>
     <p>
@@ -358,8 +382,8 @@ export const resumeContentText = {
     skillsTitle: `Skills`,
     computerSkillsTitle: `Computers`,
     computerSkillsContent: `
-    <div class="computing">
     <div class="content">
+      <p>C# / .NET : Learning of C# during my apprenticeship</p>
       <p>HTML/CSS/SASS: Website creation (My portfolio and the projects of my training at OpenClassrooms)</p>
       <p>Creating CSS animations</p>
       <p>Javascript: Advanced level frontend, beginner level backend.</p>

@@ -141,6 +141,13 @@ const formationSection = createElementFromTemplate(
 createElementFromTemplate(
   "div",
   { class: "formation--description" },
+  importedContentText.openclassroomsCSBackend,
+  formationSection
+);
+
+createElementFromTemplate(
+  "div",
+  { class: "formation--description" },
   importedContentText.openclassroomsFrontend,
   formationSection
 );

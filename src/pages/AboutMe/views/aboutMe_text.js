@@ -40,7 +40,7 @@ possède de fortes similitudes avec son prédécesseur de 2003) cette fois-ci. <
 techniques, et découvrir tout ce qu'il est possible de faire avec les
 moteurs de jeu modernes.`,
     aboutMeIntroObjectivesWeb: `J'ai découvert le développement web lors
-de ma première année à la fac Mathématiques-Informatique de Lyon. Le
+de ma première année à la faculté de Mathématiques-Informatique de Lyon. Le
 cursus universitaire ne m'a malheureusement pas plu, mais l'unité
 d'enseignement "Introduction aux réseaux et au web" m'a fortement
 interessée. Grâce à elle, j'ai découvert le potentiel des langages HTML et
