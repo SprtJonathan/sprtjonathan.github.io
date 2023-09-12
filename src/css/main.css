@@ -9,6 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* Website fonts: Rajdhani */
 @import url("https://use.typekit.net/jyg8mds.css");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
 /* Variables des éléments graphiques du site */
 /* Animation variables */
 /* Z-index values */
@@ -122,7 +123,7 @@
 }
 
 #app {
-  font-family: rajdhani, Roboto, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Rajdhani, Roboto, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
@@ -1333,6 +1334,12 @@ li {
   font-family: var(--secondary-font);
 }
 
+#background-4 {
+  background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWI3ZHdxdWhkMjJxbnlkdTY3cW8xdWx0eGZld2VrOG95dDExbDE4ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z5DdstajZxFOqmZ5TF/giphy.gif");
+  background-size: cover;
+  background-color: #080f1b;
+}
+
 @media (min-width: 768px) {
   .intro--inner-text {
     font-size: 30px;
@@ -1761,7 +1768,8 @@ li {
   transition: all ease 0.2s;
 }
 .tile--title {
-  font-family: "Rajdhani SemiBold";
+  font-family: "Rajdhani";
+  font-weight: 500;
   text-align: center;
   font-size: 22px;
 }
