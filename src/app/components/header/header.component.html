@@ -1,0 +1,106 @@
+<header class="navbar" [class.hide-navbar]="isScrollingDown">
+  <div class="container">
+    <!-- Burger toggle -->
+    <button
+      class="navbar--toggle"
+      (click)="toggleMenu()"
+      [class.open]="menuOpen"
+      aria-label="Toggle menu"
+    >
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+
+    <!-- Menu principal -->
+    <nav [ngClass]="{ 'navbar--menu--open': menuOpen, 'navbar--menu': true }">
+      <ul class="navbar--block">
+        <li class="navbar--li">
+          <a
+            routerLink="/"
+            routerLinkActive="active-page"
+            class="navbar--button"
+            (click)="closeMenu()"
+          >
+            <i class="fa fa-house"></i>
+          </a>
+        </li>
+
+        <!-- Séparateur -->
+        <li class="navbar--separator"></li>
+
+        <li class="navbar--li">
+          <a
+            routerLink="/about-me"
+            routerLinkActive="active-page"
+            class="navbar--button"
+            (click)="closeMenu()"
+            >{{ "HEADER.ABOUT" | translate }}</a
+          >
+        </li>
+        <li class="navbar--li">
+          <a
+            routerLink="/portfolio"
+            routerLinkActive="active-page"
+            class="navbar--button"
+            (click)="closeMenu()"
+            >{{ "HEADER.PORTFOLIO" | translate }}</a
+          >
+        </li>
+        <li class="navbar--li">
+          <a
+            routerLink="/resume"
+            routerLinkActive="active-page"
+            class="navbar--button"
+            (click)="closeMenu()"
+            >{{ "HEADER.RESUME" | translate }}</a
+          >
+        </li>
+        <li class="navbar--li">
+          <a
+            class="navbar--button"
+            href="#"
+            (click)="openContactModal($event); closeMenu()"
+            >{{ "HEADER.CONTACT" | translate }}</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Langue et bascule de thème -->
+    <div class="lang-selector">
+      <!-- Bouton de bascule de thème -->
+      <button
+        class="theme-toggle"
+        (click)="toggleTheme()"
+        aria-label="Basculer le thème"
+      >
+        <i class="fa" [ngClass]="isDarkTheme ? 'fa-sun' : 'fa-moon'"></i>
+      </button>
+      <!-- Séparateur -->
+      <div class="navbar--separator"></div>
+      <!-- Drapeaux -->
+      <button class="lang-flag" (click)="setLang('fr')" aria-label="Français">
+        <img src="assets/flags/fr.svg" alt="Français" />
+      </button>
+      <button class="lang-flag" (click)="setLang('en')" aria-label="English">
+        <img src="assets/flags/gb.svg" alt="English" />
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Modale de contact -->
+<app-modal
+  *ngIf="contactModalOpen"
+  title="Contactez moi"
+  (close)="contactModalOpen = false"
+>
+  <form class="contact-form">
+    <div class="contact-form--buttons">
+      <a class="contact-form--link" href="mailto:jonathanbinot@gmail.com">
+        Me contacter par Mail <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </form>
+</app-modal>

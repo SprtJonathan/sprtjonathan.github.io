@@ -1,0 +1,14 @@
+{
+  "HEADER": {
+    "ABOUT": "À propos",
+    "PORTFOLIO": "Portfolio",
+    "RESUME": "Mon CV",
+    "CONTACT": "Contact",
+    "MAIL": "Me contacter par Mail"
+  },
+  "HOME":{
+    "NAME" : "Jonathan Binot",
+    "TITLE" : "Développeur full-stack",
+    "LANGUAGES": "C#/.NET - Angular"
+  }
+}

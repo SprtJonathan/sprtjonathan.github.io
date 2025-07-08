@@ -1,0 +1,51 @@
+.modal--overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Pas de variable ici, car c'est un overlay semi-transparent */
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal {
+  background: var(--modal-bg); /* Utilisation de la variable */
+  color: var(--text-color); /* Utilisation de la variable */
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--shadow-color); /* Utilisation de la variable */
+  overflow: hidden;
+}
+
+.modal--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--modal-border); /* Utilisation de la variable */
+  background-color: var(--modal-header-bg); /* Utilisation de la variable */
+}
+
+.modal--title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.modal--close {
+  background: transparent;
+  border: none;
+  color: var(--text-color); /* Utilisation de la variable */
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.modal--close:hover {
+  transform: rotate(90deg) scale(1.2);
+}
+
+.modal--content {
+  padding: 1.5rem 1.75rem;
+}

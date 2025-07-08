@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Thème par défaut (sombre) */
+:root {
+  --background-color: rgba(10, 10, 10, 0.85);
+  --text-color: white;
+  --separator-color: rgba(255, 255, 255, 0.15);
+  --menu-bg: rgba(15, 15, 15, 0.95);
+  --modal-bg: #1e1e1e;
+  --modal-header-bg: #2c2c2c;
+  --modal-border: #333;
+  --shadow-color: rgba(0, 255, 255, 0.1);
+  --glass-bg: rgba(0, 0, 0, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+  --body-bg: #0f0b17; /* Noir/gris avec une teinte violette sombre */
+}
+
+/* Thème clair */
+:root.theme-light {
+  --background-color: rgba(255, 255, 255, 0.9);
+  --text-color: #333;
+  --separator-color: rgba(0, 0, 0, 0.15);
+  --menu-bg: rgba(240, 240, 240, 0.95);
+  --modal-bg: #ffffff;
+  --modal-header-bg: #f0f0f0;
+  --modal-border: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(0, 0, 0, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --body-bg: #ffffff; /* Blanc pur */
+}
+
+body {
+  font-family: "Ropa Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  color: var(--text-color);
+
+  background: var(--body-bg);
+  margin: 0;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
