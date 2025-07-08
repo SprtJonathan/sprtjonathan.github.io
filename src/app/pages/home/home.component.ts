@@ -8,5 +8,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  yearsOfExperience: number;
 
+  constructor(public translate: TranslateService) {
+    this.yearsOfExperience = new Date().getFullYear() - 2021;
+  }
 }
