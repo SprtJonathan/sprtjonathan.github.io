@@ -1,1 +1,28 @@
-<p>collapsible works!</p>
+<div class="collapsible">
+  <button
+    class="collapsible--trigger"
+    type="button"
+    (click)="toggle()"
+    [attr.aria-expanded]="open()"
+    [attr.aria-controls]="panelId"
+    [attr.aria-label]="title() || 'Afficher le contenu'"
+  >
+    <ng-content select="[collapsible-title]"></ng-content>
+    <span class="collapsible--icon" [class.open]="open()">⌄</span>
+  </button>
+
+  <div
+    class="collapsible--content"
+    [id]="panelId"
+    role="region"
+    [attr.aria-labelledby]="panelId + '-trigger'"
+    [class.open]="open()"
+    [style.maxHeight]="open() ? '1000px' : '0px'"
+    [style.opacity]="open() ? 1 : 0"
+    [style.transition]="
+      'max-height 0.3s cubic-bezier(.4,0,.2,1), opacity 0.24s cubic-bezier(.4,0,.2,1)'
+    "
+  >
+    <ng-content></ng-content>
+  </div>
+</div>

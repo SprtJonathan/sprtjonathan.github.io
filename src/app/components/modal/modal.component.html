@@ -1,8 +1,19 @@
-<div class="modal--overlay">
+<div
+  class="modal--overlay"
+  (click)="onOverlayClick($event)"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+>
   <div class="modal">
     <div class="modal--header">
-      <h2 class="modal--title">{{ title }}</h2>
-      <button (click)="closeModal()" class="modal--close" aria-label="Fermer">
+      <h2 id="modal-title" class="modal--title">{{ title() }}</h2>
+      <button
+        (click)="closeModal()"
+        class="modal--close"
+        aria-label="Fermer"
+        type="button"
+      >
         <i class="fa-solid fa-times"></i>
       </button>
     </div>

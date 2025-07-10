@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CollapsibleComponent } from './collapsible.component';
 
 describe('CollapsibleComponent', () => {
@@ -9,8 +8,7 @@ describe('CollapsibleComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CollapsibleComponent]
-    })
-    .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CollapsibleComponent);
     component = fixture.componentInstance;
@@ -19,5 +17,11 @@ describe('CollapsibleComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should toggle open state', () => {
+    expect(component.open()).toBeFalse();
+    component.toggle();
+    expect(component.open()).toBeTrue();
   });
 });

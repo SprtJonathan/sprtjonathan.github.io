@@ -1,10 +1,10 @@
-<header class="navbar" [class.hide-navbar]="isScrollingDown">
+<header class="navbar" [class.hide-navbar]="isScrollingDown()">
   <div class="container">
     <!-- Burger toggle -->
     <button
       class="navbar--toggle"
       (click)="toggleMenu()"
-      [class.open]="menuOpen"
+      [class.open]="menuOpen()"
       aria-label="Toggle menu"
     >
       <span class="burger-line"></span>
@@ -13,7 +13,7 @@
     </button>
 
     <!-- Menu principal -->
-    <nav [ngClass]="{ 'navbar--menu--open': menuOpen, 'navbar--menu': true }">
+    <nav [class.navbar--menu--open]="menuOpen()" class="navbar--menu">
       <ul class="navbar--block">
         <li class="navbar--li">
           <a
@@ -21,6 +21,7 @@
             routerLinkActive="active-page"
             class="navbar--button"
             (click)="closeMenu()"
+            [class.active-page]="false"
           >
             <i class="fa fa-house"></i>
           </a>
@@ -75,16 +76,30 @@
         (click)="toggleTheme()"
         aria-label="Basculer le thème"
       >
-        <i class="fa" [ngClass]="isDarkTheme ? 'fa-sun' : 'fa-moon'"></i>
+        <i
+          class="fa"
+          [class.fa-sun]="isDarkTheme()"
+          [class.fa-moon]="!isDarkTheme()"
+        ></i>
       </button>
       <!-- Séparateur -->
       <div class="navbar--separator"></div>
       <!-- Drapeaux -->
       <button class="lang-flag" (click)="setLang('fr')" aria-label="Français">
-        <img src="assets/flags/fr.svg" alt="Français" />
+        <img
+          [ngSrc]="'assets/flags/fr.svg'"
+          width="32"
+          height="24"
+          alt="Français"
+        />
       </button>
       <button class="lang-flag" (click)="setLang('en')" aria-label="English">
-        <img src="assets/flags/gb.svg" alt="English" />
+        <img
+          [ngSrc]="'assets/flags/gb.svg'"
+          width="32"
+          height="24"
+          alt="English"
+        />
       </button>
     </div>
   </div>
@@ -92,9 +107,9 @@
 
 <!-- Modale de contact -->
 <app-modal
-  *ngIf="contactModalOpen"
+  *ngIf="contactModalOpen()"
   title="Contactez moi"
-  (close)="contactModalOpen = false"
+  (close)="closeContactModal()"
 >
   <form class="contact-form">
     <a class="contact-form--link" href="mailto:jonathanbinot@gmail.com">

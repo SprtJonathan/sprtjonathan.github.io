@@ -1,51 +1,100 @@
+@use '../../../styles/variables' as *;
+
+.// === Overlay ===
 .modal--overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* Pas de variable ici, car c'est un overlay semi-transparent */
-  backdrop-filter: blur(3px);
+  z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 200;
+  justify-content: center;
+  background: $overlay-bg;
+  backdrop-filter: blur(5px) saturate(1.4);
+  -webkit-backdrop-filter: blur(5px) saturate(1.4);
+  transition: background 0.2s;
+  animation: modal-overlay-fade-in 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@keyframes modal-overlay-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+// === Modal window ===
 .modal {
-  background: var(--modal-bg); /* Utilisation de la variable */
-  color: var(--text-color); /* Utilisation de la variable */
-  width: 90%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px var(--shadow-color); /* Utilisation de la variable */
+  background: $modal-bg;
+  border-radius: $modal-border-radius;
+  min-width: 340px;
+  max-width: 90vw;
+  box-shadow: 0 6px 32px 0 var(--glass-shadow, rgba(0,0,0,0.32)), 0 1.5px 12px 0 var(--shadow-color, rgba(0, 255, 255, 0.1));
+  border: 1px solid var(--modal-border, #333);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+  animation: modal-fade-in 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+
+  @media (max-width: 600px) {
+    min-width: 0;
+    width: 98vw;
+    max-width: 98vw;
+    margin: 0 1vw;
+  }
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.97);}
+  to   { opacity: 1; transform: translateY(0) scale(1);}
 }
 
 .modal--header {
+  background: $modal-header-bg;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--modal-border); /* Utilisation de la variable */
-  background-color: var(--modal-header-bg); /* Utilisation de la variable */
+  justify-content: space-between;
+  padding: 1.1rem 1.6rem;
+  border-bottom: 1px solid var(--modal-border, #333);
 }
 
 .modal--title {
-  font-size: 1.25rem;
+  font-family: "Rajdhani", "Segoe UI", Arial, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-color, #fff);
   margin: 0;
+  flex: 1;
+  letter-spacing: 0.01em;
 }
 
 .modal--close {
   background: transparent;
   border: none;
-  color: var(--text-color); /* Utilisation de la variable */
-  font-size: 1.25rem;
+  color: var(--text-color, #fff);
+  font-size: 1.55rem;
+  padding: 0.25rem 0.7rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
-}
+  border-radius: 0.7rem;
+  transition: background 0.17s, color 0.17s, box-shadow 0.18s;
+  margin-left: 1rem;
+  outline: none;
 
-.modal--close:hover {
-  transform: rotate(90deg) scale(1.2);
+  &:hover, &:focus {
+    background: var(--glass-border, rgba(255,255,255,0.15));
+    color: $primary-blue;
+    box-shadow: 0 0 0 2px $primary-blue33;
+    outline: $focus-outline;
+  }
+
+  &:active {
+    background: $primary-blue22;
+  }
 }
 
 .modal--content {
-  padding: 1.5rem 1.75rem;
+  padding: 2.2rem 1.7rem 1.5rem 1.7rem;
+  color: var(--text-color, #fff);
+
+  @media (max-width: 600px) {
+    padding: 1.2rem 0.8rem 1rem 0.8rem;
+  }
 }

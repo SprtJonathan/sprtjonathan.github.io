@@ -1,3 +1,5 @@
+@use '../../../styles/variables' as *;
+
 .navbar {
   position: sticky;
   top: 0;
@@ -8,7 +10,8 @@
   border-radius: 16px;
   border: 1px solid var(--glass-border);
   box-shadow: 0 0 16px var(--glass-shadow);
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Ajuster les marges pour les petits écrans */
@@ -104,9 +107,7 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: calc(
-    100% - 32px
-  );
+  width: calc(100% - 32px);
   max-width: 400px;
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
@@ -170,14 +171,12 @@
   z-index: 1;
 }
 
-
 @media (max-width: 600px) {
   .navbar--button {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
   }
 }
-
 
 .navbar--button:hover {
   transform: scale(1.05);
@@ -242,28 +241,29 @@
   }
 }
 
+// === Contact links ===
 .contact-form {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
 }
 
 .contact-form--link {
-  display: flex;
-  justify-content: space-between;
-  color: var(--text-color);
+  color: var(--text-color, #fff);
   text-decoration: none;
-  text-align: center;
-  transition: color 0.3s ease;
-  padding: 1rem;
-  margin-top: 10px;
-  width: 100%;
-  &:hover {
-    border: 1px black;
-    border-radius: 16px;
-    box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.434);
-    cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.06em;
+  transition: color 0.14s;
+
+  &:hover,
+  &:focus {
+    color: $primary-blue;
+    text-decoration: underline;
+    outline: $focus-outline;
   }
 }
 

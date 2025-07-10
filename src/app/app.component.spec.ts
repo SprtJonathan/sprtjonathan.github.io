@@ -14,16 +14,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'portfolio-angular' title`, () => {
+  it(`should have the 'Jonathan Binot' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('portfolio-angular');
+    expect(app.title()).toEqual('Jonathan Binot'); // Si signal()
   });
 
+  // Optionnel: ajuste selon le vrai texte du h1 si tu l'ajoutes
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, portfolio-angular');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Jonathan Binot');
   });
 });

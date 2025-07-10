@@ -1,64 +1,75 @@
 import {
   Component,
+  ChangeDetectionStrategy,
   HostListener,
-  OnInit,
   Inject,
   PLATFORM_ID,
+  computed,
+  signal,
+  effect,
+  inject,
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { ModalComponent } from '../modal/modal.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CommonModule,
     RouterLink,
     RouterLinkActive,
     ModalComponent,
     TranslateModule,
+    NgOptimizedImage,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent implements OnInit {
-  menuOpen = false;
-  languageMenuOpen = false;
-  contactModalOpen = false;
-  isScrollingDown = false;
-  lastScrollTop = 0;
-  isDarkTheme = true; // Par défaut, thème sombre
+export class HeaderComponent {
+  // Signals pour tous les états locaux
+  readonly menuOpen = signal(false);
+  readonly languageMenuOpen = signal(false);
+  readonly contactModalOpen = signal(false);
+  readonly isScrollingDown = signal(false);
+  readonly isDarkTheme = signal(true);
+  private readonly lastScrollTop = signal(0);
 
-  constructor(
-    @Inject(PLATFORM_ID) private platformId: Object,
-    private translate: TranslateService // Ajoute l’injection ici
-  ) {}
+  // SSR friendly
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly translate = inject(TranslateService);
 
-  ngOnInit() {
+  constructor() {
+    // Thème initial
     if (isPlatformBrowser(this.platformId)) {
       const savedTheme = localStorage.getItem('theme');
-      this.isDarkTheme = savedTheme ? savedTheme === 'dark' : true;
+      this.isDarkTheme.set(savedTheme ? savedTheme === 'dark' : true);
     }
-    const lang = isPlatformBrowser(this.platformId)
-      ? localStorage.getItem('lang') || 'fr'
-      : 'fr';
+    // Langue initiale
+    let lang = 'fr';
+    if (isPlatformBrowser(this.platformId)) {
+      lang = localStorage.getItem('lang') || 'fr';
+    }
     this.translate.setDefaultLang('fr');
     this.translate.use(lang);
 
-    this.applyTheme();
+    // Effet pour appliquer le thème à chaque changement
+    effect(() => {
+      this.applyTheme();
+    });
   }
 
   toggleMenu() {
-    this.menuOpen = !this.menuOpen;
+    this.menuOpen.update((open) => !open);
   }
 
   toggleLanguageMenu(event: MouseEvent) {
     event.preventDefault();
-    this.languageMenuOpen = !this.languageMenuOpen;
+    this.languageMenuOpen.update((open) => !open);
   }
 
   setLang(lang: string) {
@@ -70,26 +81,28 @@ export class HeaderComponent implements OnInit {
 
   openContactModal(event: MouseEvent) {
     event.preventDefault();
-    this.contactModalOpen = true;
+    this.contactModalOpen.set(true);
   }
 
   closeMenu() {
-    this.menuOpen = false;
+    this.menuOpen.set(false);
+  }
+
+  closeContactModal() {
+    this.contactModalOpen.set(false);
   }
 
   toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    this.applyTheme();
-    // Sauvegarder le thème uniquement côté client
+    this.isDarkTheme.update((value) => !value);
+    // Sauvegarder le thème côté client
     if (isPlatformBrowser(this.platformId)) {
-      localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
+      localStorage.setItem('theme', this.isDarkTheme() ? 'dark' : 'light');
     }
   }
 
-  applyTheme() {
+  private applyTheme() {
     if (isPlatformBrowser(this.platformId)) {
-      // Ajoute cette vérification !
-      if (this.isDarkTheme) {
+      if (this.isDarkTheme()) {
         document.documentElement.classList.remove('theme-light');
       } else {
         document.documentElement.classList.add('theme-light');
@@ -99,8 +112,9 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const st = window.pageYOffset || document.documentElement.scrollTop;
-    this.isScrollingDown = st > this.lastScrollTop;
-    this.lastScrollTop = st <= 0 ? 0 : st;
+    this.isScrollingDown.set(st > this.lastScrollTop());
+    this.lastScrollTop.set(st <= 0 ? 0 : st);
   }
 }
