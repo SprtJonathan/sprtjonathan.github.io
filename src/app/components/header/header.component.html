@@ -97,10 +97,16 @@
   (close)="contactModalOpen = false"
 >
   <form class="contact-form">
-    <div class="contact-form--buttons">
-      <a class="contact-form--link" href="mailto:jonathanbinot@gmail.com">
-        Me contacter par Mail <i class="fas fa-external-link-alt"></i>
-      </a>
-    </div>
+    <a class="contact-form--link" href="mailto:jonathanbinot@gmail.com">
+      {{ "CONTACT.MAIL" | translate }}
+      <i class="fas fa-external-link-alt"></i>
+    </a>
+    <a
+      class="contact-form--link"
+      href="https://www.linkedin.com/in/jonathanbinot/"
+    >
+      {{ "CONTACT.LINKEDIN" | translate }}
+      <i class="fas fa-external-link-alt"></i>
+    </a>
   </form>
 </app-modal>

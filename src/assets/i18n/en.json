@@ -11,5 +11,12 @@
     "TITLE": "Full-stack developer",
     "LANGUAGES": "C#/.NET - Angular",
     "INTRO": "Hi, my name is Jonathan Binot, a C# / .NET and Angular developer. \nI have {{webDevYears}} years of experience in web development, along with several years of self-taught learning. I’ve worked on various projects, including showcase websites, internal social networks, business applications and tools, as well as projects focused on improving website SEO and visibility.\n\nPassionate about software development (web, applications, and video games), I'm eager to keep expanding my skills while continuing to learn, in order to contribute effectively to a wide range of projects. I will soon begin a software developer training program, allowing me to deepen my knowledge of Microsoft’s C# language and the .NET platform.\n\nOn this website, you'll find an overview of my work, my resume, and a portfolio showcasing my projects. To open the site menu, simply click the floating button in the top-left corner of the page."
+  },
+  "ABOUT": {},
+  "PORTFOLIO" : {},
+  "RESUME" : {},
+  "CONTACT" : {
+    "MAIL" : "Send me an email",
+    "LINKEDIN" : "My LinkedIn"
   }
 }

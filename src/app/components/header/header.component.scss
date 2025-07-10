@@ -100,12 +100,14 @@
 .navbar--menu.navbar--menu--open {
   display: flex;
   position: absolute;
-  top: 64px; /* Ajusté pour correspondre à la hauteur de .container */
+  top: 64px;
   left: 0;
   right: 0;
-  margin: 0 auto; /* Centrer le dropdown */
-  width: calc(100% - 32px); /* Ajuster la largeur pour tenir compte des marges */
-  max-width: 400px; /* Limiter la largeur maximale pour éviter un étirement excessif */
+  margin: 0 auto;
+  width: calc(
+    100% - 32px
+  );
+  max-width: 400px;
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border-radius: 12px;
@@ -116,11 +118,10 @@
   transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Ajuster le top et la largeur pour les petits écrans */
 @media (max-width: 600px) {
   .navbar--menu.navbar--menu--open {
-    top: 48px; /* Correspond à la hauteur réduite de .container */
-    width: calc(100% - 16px); /* Ajuster pour les marges réduites */
+    top: 48px;
+    width: calc(100% - 16px);
     padding: 0.75rem;
   }
 }
@@ -158,7 +159,6 @@
   position: relative;
 }
 
-/* 🌈 Effet néon avec dégradé violet sombre */
 .navbar--button {
   position: relative;
   color: var(--text-color);
@@ -170,7 +170,7 @@
   z-index: 1;
 }
 
-/* Ajuster le padding des boutons sur petits écrans */
+
 @media (max-width: 600px) {
   .navbar--button {
     padding: 0.4rem 0.8rem;
@@ -178,19 +178,14 @@
   }
 }
 
-/* Effet néon au survol */
+
 .navbar--button:hover {
   transform: scale(1.05);
   color: var(--text-color);
-  text-shadow: 
-    0 0 2px #4b0082,
-    0 0 4px #6a0dad,
-    0 0 8px #8b00ff,
-    0 0 12px #b266ff,
-    0 0 16px #b266ff;
+  text-shadow: 0 0 2px #4b0082, 0 0 4px #6a0dad, 0 0 8px #8b00ff,
+    0 0 12px #b266ff, 0 0 16px #b266ff;
 }
 
-/* 🧱 Séparateur */
 .navbar--separator {
   width: 2px;
   height: 24px;
@@ -200,7 +195,6 @@
   transition: background 0.3s ease;
 }
 
-/* Ajuster le séparateur sur petits écrans */
 @media (max-width: 600px) {
   .navbar--separator {
     height: 18px;
@@ -208,7 +202,6 @@
   }
 }
 
-/* 🌍 Drapeaux langue et bascule de thème */
 .lang-selector {
   display: flex;
   gap: 0.5rem;
@@ -236,7 +229,6 @@
   transform: scale(1.2);
 }
 
-/* Ajuster la taille des drapeaux et du bouton de thème sur petits écrans */
 @media (max-width: 600px) {
   .lang-selector {
     gap: 0.3rem;
@@ -252,13 +244,27 @@
 
 .contact-form {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .contact-form--link {
+  display: flex;
+  justify-content: space-between;
   color: var(--text-color);
   text-decoration: none;
+  text-align: center;
   transition: color 0.3s ease;
+  padding: 1rem;
+  margin-top: 10px;
+  width: 100%;
+  &:hover {
+    border: 1px black;
+    border-radius: 16px;
+    box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.434);
+    cursor: pointer;
+  }
 }
 
 .theme-toggle {
