@@ -1,1 +1,172 @@
-<p>resume works!</p>
+<section class="resume-header">
+  <h1>{{ 'resume.header.name' | translate }}</h1>
+  <h2>{{ 'resume.header.desc' | translate }}</h2>
+  <p class="resume-header--intro">{{ 'resume.header.introText' | translate }}</p>
+  <p class="resume-header--portfolio">
+    {{ 'resume.header.portfolio' | translate }}
+    <a href="https://github.com/SprtJonathan" target="_blank" rel="noopener">
+      github.com/SprtJonathan <i class="fa fa-external-link-alt"></i>
+    </a>
+  </p>
+  <ul class="resume-header--meta">
+    <li>
+      <i class="fa fa-cake-candles"></i>
+      {{ 'resume.header.birth' | translate:{ date: '14/02/1999', age: age() } }}
+    </li>
+    <li>
+      <i class="fa fa-id-badge"></i>
+      <a href="mailto:jonathanbinot@gmail.com">
+        {{ 'resume.header.contact' | translate }}
+      </a>
+    </li>
+    <li>
+      <i class="fab fa-linkedin"></i>
+      <a href="https://linkedin.com/in/jonathan-binot-260267154" target="_blank" rel="noopener">
+        {{ 'resume.header.linkedin' | translate }}
+      </a>
+    </li>
+    <li>
+      <i class="fa fa-car"></i>
+      {{ 'resume.header.driving' | translate }}
+    </li>
+  </ul>
+</section>
+
+<div class="resume-columns">
+  <section>
+    <h2 class="section-title">
+      <i class="fa fa-graduation-cap"></i>
+      {{ 'resume.sections.education' | translate }}
+    </h2>
+    <app-collapsible *ngFor="let edu of ('resume.education' | translate)">
+      <div collapsible-title>
+        {{ edu.year }} – {{ edu.title }}<span *ngIf="edu.school"> ({{ edu.school }})</span>
+      </div>
+      <ul *ngIf="edu.details">
+        <li *ngFor="let detail of edu.details">{{ detail }}</li>
+      </ul>
+    </app-collapsible>
+  </section>
+
+  <section>
+    <h2 class="section-title">
+      <i class="fa fa-briefcase"></i>
+      {{ 'resume.sections.experience' | translate }}
+    </h2>
+    <app-collapsible *ngFor="let exp of ('resume.experience' | translate)">
+      <div collapsible-title>
+        {{ exp.title }}
+        <span *ngIf="exp.period">({{ exp.period }})</span>
+      </div>
+      <ul>
+        <li *ngFor="let detail of exp.details">{{ detail }}</li>
+      </ul>
+      <a
+        *ngIf="exp.website"
+        [href]="exp.website"
+        target="_blank"
+        rel="noopener"
+        class="resume-link"
+      >
+        {{ exp.website }} <i class="fa fa-external-link-alt"></i>
+      </a>
+    </app-collapsible>
+  </section>
+</div>
+
+<div class="resume-columns">
+  <section>
+    <h2 class="section-title">
+      <i class="fa fa-laptop-code"></i>
+      {{ 'resume.sections.skills' | translate }}
+    </h2>
+    <app-collapsible>
+      <div collapsible-title>
+        Hard Skills
+      </div>
+      <ul>
+        <li *ngFor="let s of ('resume.skills.hard' | translate)">{{ s }}</li>
+      </ul>
+    </app-collapsible>
+    <app-collapsible>
+      <div collapsible-title>
+        Soft Skills
+      </div>
+      <ul>
+        <li *ngFor="let s of ('resume.skills.soft' | translate)">{{ s }}</li>
+      </ul>
+    </app-collapsible>
+    <app-collapsible>
+      <div collapsible-title>
+        {{ 'resume.skills.languages' | translate }}
+      </div>
+      <ul>
+        <li *ngFor="let l of ('resume.skills.languages' | translate)">{{ l }}</li>
+      </ul>
+    </app-collapsible>
+  </section>
+
+  <section>
+    <h2 class="section-title">
+      <i class="fa fa-lightbulb"></i>
+      {{ 'resume.sections.projects' | translate }}
+    </h2>
+    <ul class="notable-projects-list">
+      <li *ngFor="let project of ('resume.projects' | translate)">
+        <a
+          [href]="project.url"
+          target="_blank"
+          rel="noopener"
+          class="resume-link"
+        >
+          {{ project.name }}
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<div class="resume-columns">
+  <section>
+    <h2 class="section-title">
+      <i class="fa fa-music"></i>
+      {{ 'resume.sections.hobbies' | translate }}
+    </h2>
+    <app-collapsible *ngFor="let hobby of ('resume.hobbies' | translate)">
+      <div collapsible-title>
+        {{ hobby.title }}
+        <button
+          *ngIf="hobby.more"
+          type="button"
+          class="link-btn"
+          (click)="openHobbyModal(hobby)"
+        >
+          {{ 'resume.knowMore' | translate }}
+        </button>
+      </div>
+      <ul>
+        <li *ngFor="let d of hobby.desc">{{ d }}</li>
+      </ul>
+    </app-collapsible>
+  </section>
+
+  <section>
+    <h2 class="section-title">
+      <i class="fa fa-users"></i>
+      {{ 'resume.sections.charity' | translate }}
+    </h2>
+    <div class="resume-charity">
+      <strong>{{ ('resume.charity.title' | translate) }}</strong>
+      <span>{{ ('resume.charity.desc' | translate) }}</span>
+    </div>
+  </section>
+</div>
+
+<!-- Modal for hobbies "En savoir plus" -->
+<app-modal
+  *ngIf="selectedHobby"
+  [title]="selectedHobby.moreTitle"
+  (close)="closeHobbyModal()"
+>
+  <p>{{ selectedHobby.more }}</p>
+</app-modal>

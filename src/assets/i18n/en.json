@@ -13,10 +13,184 @@
     "INTRO": "Hi, my name is Jonathan Binot, a C# / .NET and Angular developer. \nI have {{webDevYears}} years of experience in web development, along with several years of self-taught learning. I’ve worked on various projects, including showcase websites, internal social networks, business applications and tools, as well as projects focused on improving website SEO and visibility.\n\nPassionate about software development (web, applications, and video games), I'm eager to keep expanding my skills while continuing to learn, in order to contribute effectively to a wide range of projects. I will soon begin a software developer training program, allowing me to deepen my knowledge of Microsoft’s C# language and the .NET platform.\n\nOn this website, you'll find an overview of my work, my resume, and a portfolio showcasing my projects. To open the site menu, simply click the floating button in the top-left corner of the page."
   },
   "ABOUT": {},
-  "PORTFOLIO" : {},
-  "RESUME" : {},
-  "CONTACT" : {
-    "MAIL" : "Send me an email",
-    "LINKEDIN" : "My LinkedIn"
+  "PORTFOLIO": {},
+  "resume": {
+    "header": {
+      "name": "JONATHAN BINOT",
+      "desc": "Frontend web developer - Available now",
+      "introText": "Passionate about IT, web development and new technologies. I want to deepen my knowledge through hands-on experience in a company while continuing my education. I adapt quickly.",
+      "portfolio": "See my projects on the Portfolio page or on my Github:",
+      "birth": "Born {{date}} ({{age}} years old)",
+      "contact": "Send me an email",
+      "linkedin": "My LinkedIn profile",
+      "driving": "Driving license (since 03/23/2018)"
+    },
+    "sections": {
+      "education": "Training",
+      "experience": "Professional Experience",
+      "skills": "Skills",
+      "projects": "Notable Projects",
+      "hobbies": "Hobbies",
+      "charity": "Volunteering"
+    },
+    "education": [
+      {
+        "year": "2023-2025",
+        "title": "Back-End Developer C# / .NET",
+        "school": "OpenClassrooms",
+        "details": [
+          "Apprenticeship",
+          "Back-end development",
+          "Application maintenance & improvement",
+          "Front-end collaboration",
+          "Security & compliance"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "Frontend Developer",
+        "school": "OpenClassrooms",
+        "details": [
+          "Requirements analysis",
+          "Mockup implementation",
+          "Performance optimization",
+          "React and other frameworks"
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "Web Developer",
+        "school": "OpenClassrooms",
+        "details": [
+          "Building web pages (HTML5/CSS3)",
+          "Integrating multimedia content",
+          "W3C standards compliance",
+          "Database management"
+        ]
+      },
+      {
+        "year": "2017-2018",
+        "title": "Maths-Computer Science degree (1st year)",
+        "school": "Université Claude Bernard Lyon 1",
+        "details": [
+          "Introduction to networking, web, algorithms, UNIX",
+          "Several teaching units validated"
+        ]
+      },
+      {
+        "year": "2017",
+        "title": "General Scientific Baccalaureate",
+        "school": "Saint Marc High School, Lyon"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Customer advisor – La Tête Dans Les Nuages (Lyon)",
+        "period": "October 2018 to July 2020",
+        "type": "Fixed-term/permanent contract",
+        "website": "https://latetedanslesnuages.com",
+        "details": [
+          "Customer welcome & presentation",
+          "Sales & commercial techniques",
+          "Responsible for closing",
+          "Basic maintenance (games & cash registers)",
+          "Relations with clients & team"
+        ]
+      },
+      {
+        "title": "Internship – Epitech Lyon",
+        "period": "February 2016 (1 week)",
+        "website": "https://www.epitech.eu/",
+        "details": [
+          "Programming in C",
+          "Discovering game development with Unity"
+        ]
+      },
+      {
+        "title": "IT Department Internship – Pôle Emploi",
+        "period": "February 2015 (1 week)",
+        "website": "https://www.pole-emploi.fr/accueil/",
+        "details": [
+          "Discovering the IT environment",
+          "Incident management and resolution"
+        ]
+      }
+    ],
+    "skills": {
+      "hard": [
+        "C# / .NET: back-end development (apprenticeship)",
+        "HTML/CSS/SASS: websites, portfolio, OpenClassrooms projects",
+        "Javascript: advanced (frontend), beginner (backend)",
+        "React, Vue, ViteJS: sites & APIs",
+        "CSS animations, video editing, Photoshop",
+        "Unreal Engine, Source Engine: level design, blueprints",
+        "PC building & maintenance, OS installation/configuration"
+      ],
+      "soft": [
+        "Adaptability",
+        "Trust with team",
+        "Problem solving",
+        "Communication and business sense",
+        "Self-taught",
+        "Imaginative and creative"
+      ],
+      "languages": ["English: fluent", "Polish: native/basic"]
+    },
+    "projects": [
+      {
+        "name": "Enterprise social network (express + VueJS)",
+        "url": "https://github.com/SprtJonathan/JonathanBinot_7_28042021"
+      },
+      {
+        "name": "Personal portfolio",
+        "url": "https://github.com/SprtJonathan/jonathanbinot"
+      },
+      {
+        "name": "Form builder app",
+        "url": "https://github.com/SprtJonathan/AdministrativeManager"
+      },
+      {
+        "name": "JQuery → React migration",
+        "url": "https://github.com/SprtJonathan/JonathanBinot_14_16062022"
+      }
+    ],
+    "hobbies": [
+      {
+        "title": "Music",
+        "desc": [
+          "Piano (2006-2014) – Lyon Conservatory",
+          "Music theory (2006-2013) – Lyon Conservatory",
+          "Self-taught since 2014",
+          "Perfect pitch"
+        ]
+      },
+      {
+        "title": "Editing",
+        "desc": [
+          "Video editing (short films, green screen, Vegas, Premiere, Kdenlive)",
+          "Photo editing (Photoshop, site backgrounds, creative retouching)"
+        ],
+        "moreTitle": "Photo editing",
+        "more": "I create illustrations and graphics for my websites and social media. All backgrounds here are by me."
+      },
+      {
+        "title": "Video games",
+        "desc": [
+          "Self-taught: Unreal Engine, Source 1 & 2",
+          "Passion for VR and technology"
+        ],
+        "moreTitle": "Game creation",
+        "more": "I've learned to use several game engines and often create maps/scripts (Half-Life, Unreal)."
+      }
+    ],
+    "charity": {
+      "title": "Volunteering",
+      "desc": "2015-2016 – Amnesty International (petitions, human rights activism)"
+    },
+    "knowMore": "Learn more"
+  },
+  "CONTACT": {
+    "MAIL": "Send me an email",
+    "LINKEDIN": "My LinkedIn"
   }
 }

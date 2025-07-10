@@ -13,10 +13,184 @@
     "INTRO": "Bonjour, je m'appelle Jonathan Binot, développeur C# / .NET et Angular. \nJe dispose de {{webDevYears}} ans d’expérience dans le développement web, auxquels s’ajoutent plusieurs années d’apprentissage en autodidacte. J’ai pu réaliser de nombreux projets : sites vitrines, réseaux sociaux d'entreprise, applications et outils en ligne pour les entreprises, ainsi que des projets centrés sur l’amélioration du référencement et du SEO de sites web.\n\nPassionné par le développement informatique (web, logiciels et jeux vidéo), je suis motivé à continuer de développer mes compétences tout en apprenant constamment, afin de pouvoir contribuer efficacement à des projets variés. Je vais prochainement débuter une formation de développeur concepteur logiciel, qui me permettra de renforcer mes connaissances en C# et sur la plateforme .NET.\n\nSur ce site, vous trouverez une présentation de mon travail, mon CV ainsi que mon portfolio, qui répertorie mes différentes réalisations. Pour accéder au menu du site, vous pouvez cliquer sur le bouton flottant en haut à gauche de la page."
   },
   "ABOUT": {},
-  "PORTFOLIO" : {},
-  "RESUME" : {},
-  "CONTACT" : {
-    "MAIL" : "Me contacter par mail",
-    "LINKEDIN" : "Mon LinkedIn"
+  "PORTFOLIO": {},
+  "resume": {
+    "header": {
+      "name": "JONATHAN BINOT",
+      "desc": "Développeur web Frontend - Disponible immédiatement",
+      "introText": "Passionné d’informatique, de développement web et curieux des nouvelles technologies, je souhaite approfondir mes connaissances en entreprise tout en poursuivant ma formation. Je m’adapte rapidement.",
+      "portfolio": "Retrouvez mes réalisations sur la page Portfolio ou sur mon Github :",
+      "birth": "Né le {{date}} ({{age}} ans)",
+      "contact": "Me contacter par mail",
+      "linkedin": "Mon profil LinkedIn",
+      "driving": "Permis B (depuis le 23/03/2018)"
+    },
+    "sections": {
+      "education": "Formation",
+      "experience": "Expérience Professionnelle",
+      "skills": "Compétences",
+      "projects": "Projets notables",
+      "hobbies": "Centres d'intérêts",
+      "charity": "Associatif"
+    },
+    "education": [
+      {
+        "year": "2023-2025",
+        "title": "Développeur Back-End C# / .NET",
+        "school": "OpenClassrooms",
+        "details": [
+          "Formation en alternance",
+          "Développement de fonctionnalités back-end",
+          "Maintenance et amélioration d'une application existante",
+          "Collaboration avec l'équipe front-end",
+          "Sécurité et conformité"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "Développeur Frontend",
+        "school": "OpenClassrooms",
+        "details": [
+          "Analyse des besoins",
+          "Implémentation de maquettes",
+          "Optimisation des performances",
+          "Utilisation de frameworks dont React"
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "Développeur Web",
+        "school": "OpenClassrooms",
+        "details": [
+          "Assemblage de pages web en HTML5/CSS3",
+          "Intégration de contenus multimédias",
+          "Respect des normes W3C",
+          "Gestion de bases de données"
+        ]
+      },
+      {
+        "year": "2017-2018",
+        "title": "Licence Maths-Informatique",
+        "school": "Université Claude Bernard Lyon 1",
+        "details": [
+          "Initiation aux réseaux, web, algorithmique, UNIX",
+          "Validation de plusieurs unités d'enseignement"
+        ]
+      },
+      {
+        "year": "2017",
+        "title": "Baccalauréat Scientifique SVT spé Physique-Chimie",
+        "school": "Lycée Saint Marc, Lyon"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Conseiller loisirs – La Tête Dans Les Nuages (Lyon)",
+        "period": "Octobre 2018 à juillet 2020",
+        "type": "CDD/CDI",
+        "website": "https://latetedanslesnuages.com",
+        "details": [
+          "Accueil et présentation de l'offre",
+          "Vente, techniques commerciales",
+          "Responsable de la fermeture",
+          "Maintenance basique jeux et caisses",
+          "Relationnel clients et équipe"
+        ]
+      },
+      {
+        "title": "Stage d'intégration – Epitech Lyon",
+        "period": "Février 2016 (1 semaine)",
+        "website": "https://www.epitech.eu/",
+        "details": [
+          "Programmation en C",
+          "Découverte de la création de jeu vidéo avec Unity"
+        ]
+      },
+      {
+        "title": "Stage Service Informatique Régional – Pôle Emploi",
+        "period": "Février 2015 (1 semaine)",
+        "website": "https://www.pole-emploi.fr/accueil/",
+        "details": [
+          "Découverte de l’environnement IT",
+          "Gestion et résolution d’incidents"
+        ]
+      }
+    ],
+    "skills": {
+      "hard": [
+        "C# / .NET : développement back-end en alternance",
+        "HTML/CSS/SASS : sites web, portfolio, projets OpenClassrooms",
+        "Javascript : avancé (frontend), débutant (backend)",
+        "React, Vue, ViteJS : sites et API",
+        "Animations CSS, montage vidéo, photomontages Photoshop",
+        "Unreal Engine, Source Engine : level design, blueprints",
+        "Montage et maintenance PC, installation/configuration OS"
+      ],
+      "soft": [
+        "Adaptabilité",
+        "Relation de confiance avec l’équipe",
+        "Résolution de problèmes",
+        "Communication et sens commercial",
+        "Autodidacte",
+        "Imaginatif et créatif"
+      ],
+      "languages": ["Anglais : courant", "Polonais : maternel / basique"]
+    },
+    "projects": [
+      {
+        "name": "Réseau social d’entreprise (express + VueJS)",
+        "url": "https://github.com/SprtJonathan/JonathanBinot_7_28042021"
+      },
+      {
+        "name": "Portfolio personnel",
+        "url": "https://github.com/SprtJonathan/jonathanbinot"
+      },
+      {
+        "name": "Application de création de formulaires",
+        "url": "https://github.com/SprtJonathan/AdministrativeManager"
+      },
+      {
+        "name": "Transposition JQuery → React",
+        "url": "https://github.com/SprtJonathan/JonathanBinot_14_16062022"
+      }
+    ],
+    "hobbies": [
+      {
+        "title": "Musique",
+        "desc": [
+          "Piano (2006-2014) – Conservatoire de Lyon",
+          "Solfège (2006-2013) – Conservatoire de Lyon",
+          "Autodidacte depuis 2014",
+          "Oreille absolue"
+        ]
+      },
+      {
+        "title": "Montage",
+        "desc": [
+          "Montage vidéo (courts métrages, fond vert, Vegas, Premiere, Kdenlive)",
+          "Montage photo (Photoshop, images du site, retouches 'fantaisistes')"
+        ],
+        "moreTitle": "Montage photo",
+        "more": "Création d’illustrations et retouches pour mes sites et réseaux, toutes les images de fond de ce portfolio sont de ma main."
+      },
+      {
+        "title": "Jeu vidéo",
+        "desc": [
+          "Apprentissage autodidacte : Unreal Engine, Source 1 & 2",
+          "Intérêt pour la VR et l’innovation technologique"
+        ],
+        "moreTitle": "Création vidéoludique",
+        "more": "J’ai appris à utiliser différents moteurs de jeu et je conçois régulièrement des maps ou scripts (Half-Life, Unreal)."
+      }
+    ],
+    "charity": {
+      "title": "Associatif",
+      "desc": "2015-2016 – Action Amnesty International (pétitions, défense des droits humains)"
+    },
+    "knowMore": "En savoir plus"
+  },
+  "CONTACT": {
+    "MAIL": "Me contacter par mail",
+    "LINKEDIN": "Mon LinkedIn"
   }
 }
